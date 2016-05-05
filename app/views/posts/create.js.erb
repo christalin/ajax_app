@@ -1,0 +1,8 @@
+$("#myModal").modal('hide');
+
+console.log($("#post_title").val() +'posttitle');
+$("textarea#post_title.form-control").val('');
+$("textarea#post_content.form-control").val('');
+
+$("#container_posts").prepend('<%= j render @post %>');
+$("#post_<%= @post.id %>").hide().fadeIn(2000);
